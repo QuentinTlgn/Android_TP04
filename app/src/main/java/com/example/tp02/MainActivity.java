@@ -1,10 +1,11 @@
 package com.example.tp02;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+import com.example.tp02.ChildActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
         String lastName = ((EditText)findViewById(R.id.edtLastName)).getText().toString();
         String firstName = ((EditText)findViewById(R.id.edtFirstName)).getText().toString();
 
-        textView.setText("Nom: " + lastName + "\nPrenom: " + firstName);
-
-        Toast.makeText(v.getContext(), "OK !", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, ChildActivity.class);
+        intent.putExtra("firstName", firstName);
+        intent.putExtra("lastName", lastName);
+        startActivity(intent);
     }
 }
