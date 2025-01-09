@@ -50,9 +50,10 @@ public class MainActivity extends AppCompatActivity {
         String lastName = ((EditText)findViewById(R.id.edtLastName)).getText().toString();
         String firstName = ((EditText)findViewById(R.id.edtFirstName)).getText().toString();
 
+        this.myApp.objetPersonne.setFirstName(firstName);
+        this.myApp.objetPersonne.setLastName(lastName);
+
         Intent intent = new Intent(this, ChildActivity.class);
-        intent.putExtra("firstName", firstName);
-        intent.putExtra("lastName", lastName);
         myActivityResultLauncher.launch(intent);
     }
 }
