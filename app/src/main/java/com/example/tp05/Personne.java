@@ -1,4 +1,4 @@
-package com.example.tp04;
+package com.example.tp05;
 
 public class Personne {
     public String firstName;

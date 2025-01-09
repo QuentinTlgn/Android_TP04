@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/edtLastName" />
+        android:hint="@string/edtLastName" />
 
     <EditText
         android:id="@+id/edtFirstName"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/edtFirstName" />
+        android:hint="@string/edtFirstName" />
 
     <Button
         android:id="@+id/btnSend"
@@ -27,12 +27,6 @@
         android:layout_height="wrap_content"
         android:onClick="onClick_btnSend"
         android:text="@string/btnSend" />
-
-    <TextView
-        android:id="@+id/txtResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtResult" />
 
     <TextView
         android:id="@+id/txtChildReturn"

@@ -1,4 +1,4 @@
-package com.example.tp04;
+package com.example.tp05;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ChildActivity extends AppCompatActivity {
 
-    private AppTP04 myApp;
+    private AppTP05 myApp;
     private EditText firstNameEditText;
     private EditText lastNameEditText;
 
@@ -25,7 +25,7 @@ public class ChildActivity extends AppCompatActivity {
         lastNameEditText = findViewById(R.id.lastNameEditText);
         Button saveButton = findViewById(R.id.saveButton); // Assuming you have a save button
 
-        this.myApp = (AppTP04) getApplication();
+        this.myApp = (AppTP05) getApplication();
 
         // Display initial values
         firstNameEditText.setText(this.myApp.objetPersonne.getFirstName());

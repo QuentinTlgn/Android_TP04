@@ -1,4 +1,4 @@
-package com.example.tp04;
+package com.example.tp05;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,20 +15,18 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    TextView textView;
     TextView textViewChild;
 
-    private AppTP04 myApp;
+    protected AppTP05 myApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = findViewById(R.id.txtResult);
         textViewChild = findViewById(R.id.txtChildReturn);
 
-        this.myApp = (AppTP04) getApplication();
+        this.myApp = (AppTP05) getApplication();
         this.myApp.objetPersonne = new Personne("John", "Doe");
     }
 
@@ -40,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     if (result.getResultCode() == Activity.RESULT_OK) {
                         Intent myIntent = result.getData();
                         String myString = myIntent.getStringExtra("valRenvoyee");
-                        textViewChild.setText("Resultat retourné par l'activité fille : " + myString);
+                        textViewChild.setText(MainActivity.this.myApp.objetPersonne.getFirstName() + " " + MainActivity.this.myApp.objetPersonne.getLastName());
                         Toast.makeText(MainActivity.this, "OK retournée de l'activité fille !", Toast.LENGTH_LONG).show();
                     }
                 }
