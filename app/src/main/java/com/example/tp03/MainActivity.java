@@ -1,11 +1,10 @@
-package com.example.tp02;
+package com.example.tp03;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.example.tp02.ChildActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

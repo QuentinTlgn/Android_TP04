@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TP02</string>
+    <string name="app_name">TP03</string>
     <string name="edtLastName">Nom : </string>
     <string name="edtFirstName">Prénom : </string>
     <string name="btnSend">Envoyer</string>
