@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TP02</string>
+    <string name="edtLastName">Nom : </string>
+    <string name="edtFirstName">Prénom : </string>
+    <string name="btnSend">Envoyer</string>
+    <string name="txtResult">Résultat :</string>
 </resources>
