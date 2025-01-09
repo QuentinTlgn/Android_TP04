@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             new ActivityResultCallback<ActivityResult>() {
                 @Override
                 public void onActivityResult(ActivityResult result) {
-                    if (result.getResultCode() == Activity.RESULT_OK) { // There are no request codes
+                    if (result.getResultCode() == Activity.RESULT_OK) {
                         Intent myIntent = result.getData();
                         String myString = myIntent.getStringExtra("valRenvoyee");
                         textViewChild.setText("Resultat retourné par l'activité fille : " + myString);
