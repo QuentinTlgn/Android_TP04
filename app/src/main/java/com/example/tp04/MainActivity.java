@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     TextView textViewChild;
 
+    private AppTP04 myApp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.txtResult);
         textViewChild = findViewById(R.id.txtChildReturn);
+
+        this.myApp = (AppTP04) getApplication();
+        this.myApp.objetPersonne = new Personne("John", "Doe");
     }
 
     ActivityResultLauncher<Intent> myActivityResultLauncher = registerForActivityResult(
